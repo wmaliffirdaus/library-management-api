@@ -179,8 +179,8 @@ library-dashboard-frontend/
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/library-dashboard-frontend.git
-cd library-dashboard-frontend
+git clone https://github.com/your-username/library-management-api.git
+cd library-management-api
 ```
 
 ### 2. Install Dependencies

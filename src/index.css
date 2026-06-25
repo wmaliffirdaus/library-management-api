@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-cyber-bg: var(--cyber-bg);
+  --color-cyber-surface: var(--cyber-surface);
+  --color-cyber-panel: var(--cyber-panel);
+  --color-cyber-panel-high: var(--cyber-panel-high);
+  --color-cyber-cyan: var(--cyber-cyan);
+  --color-cyber-cyan-dim: var(--cyber-cyan-dim);
+  --color-cyber-purple: var(--cyber-purple);
+  --color-cyber-purple-dim: var(--cyber-purple-dim);
+  --color-cyber-text: var(--cyber-text);
+  --color-cyber-text-muted: var(--cyber-text-muted);
+  --color-cyber-border: var(--cyber-border);
+  --color-cyber-border-muted: var(--cyber-border-muted);
+  --color-cyber-error: var(--cyber-error);
+}
+
+:root {
+  --cyber-bg: #f8faff;
+  --cyber-surface: #ffffff;
+  --cyber-panel: #f1f5f9;
+  --cyber-panel-high: #e2e8f0;
+  --cyber-cyan: #4f46e5;
+  --cyber-cyan-dim: #c7d2fe;
+  --cyber-purple: #ec4899;
+  --cyber-purple-dim: #fbcfe8;
+  --cyber-text: #0f172a;
+  --cyber-text-muted: #64748b;
+  --cyber-border: #e2e8f0;
+  --cyber-border-muted: #f8faff;
+  --cyber-error: #ef4444;
+}
+
+.dark {
+  --cyber-bg: #0b0f19;
+  --cyber-surface: #111827;
+  --cyber-panel: #1f2937;
+  --cyber-panel-high: #374151;
+  --cyber-cyan: #6366f1;
+  --cyber-cyan-dim: #312e81;
+  --cyber-purple: #f472b6;
+  --cyber-purple-dim: #831843;
+  --cyber-text: #f9fafb;
+  --cyber-text-muted: #9ca3af;
+  --cyber-border: #374151;
+  --cyber-border-muted: #111827;
+  --cyber-error: #f87171;
+}
+
+@utility cyber-glow {
+  text-shadow: 0 2px 8px rgba(79, 70, 229, 0.15);
+}
+@utility cyber-glow-purple {
+  text-shadow: 0 2px 8px rgba(236, 72, 153, 0.15);
+}
+@utility cyber-box-glow {
+  box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.08), 0 8px 10px -6px rgba(79, 70, 229, 0.08);
+}
+@utility cyber-box-glow-purple {
+  box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.08), 0 8px 10px -6px rgba(236, 72, 153, 0.08);
+}
+@utility cyber-scanline {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: rgba(79, 70, 229, 0.1);
+  top: 0;
+  animation: scan 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% { top: -10%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 110%; opacity: 0; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cyber-bg); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--cyber-border); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyber-text-muted); 
+}
+

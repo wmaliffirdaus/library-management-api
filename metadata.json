@@ -1,0 +1,7 @@
+{
+  "name": "Cyber-Archive Developer Portal",
+  "description": "Secure developer portal for authenticating and querying the declassified digital library database.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
